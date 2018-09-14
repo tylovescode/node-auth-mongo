@@ -1,17 +1,13 @@
 {{#each ideas}}
-<div class="card mb-2">
+<div class="card text-center mb-2">
   <div class="card-body">
     <h4>{{title}}</h4>
     <p>{{details}}</p>
-    <div class="row">
-      <div class="col-sm-6 text-center"><a href="/ideas/edit/{{id}}" class="btn btn-sm btn-dark mb-2">Edit</a></div>
-      <div class="col-sm-6 text-center">
-        <form method="post" action="/ideas/{{id}}?_method=DELETE">
-          <input type="hidden" name="_method" value="DELETE">
-          <input type="submit" class="btn btn-danger btn-sm" value="Delete">
-        </form>
-      </div>
-    </div>
+    <a href="/ideas/edit/{{id}}" class="btn btn-sm btn-dark mb-2">Edit</a>
+    <form method="post" action="/ideas/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+    </form>
   </div>
 </div>
 {{else}}
