@@ -1,3 +1,5 @@
-{{!-- Loops through errors array if errors are present --}} {{#each errors}}
+{{#if error}}
+<div class="alert alert-danger">{{error}}</div>
+{{/if}} {{!-- Loops through errors array if errors are present --}} {{#each errors}}
 <div class="alert alert-danger">{{text}}</div>
 {{else}} {{/each}}
